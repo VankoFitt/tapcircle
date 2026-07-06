@@ -1,4 +1,8 @@
-name: Build APK
+- name: Accept Android licenses
+  run: |
+    yes | $ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager --licenses || true
+
+- name: Build APK
 
 on:
   push:
